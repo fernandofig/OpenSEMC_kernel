@@ -121,12 +121,6 @@ config CPU_FREQ_DEFAULT_GOV_SAKURACTIVE
     help
      If in doubt, say N.
 
-config CPU_FREQ_DEFAULT_GOV_HOTPLUG
-	bool "hotplug"
-	select CPU_FREQ_GOV_HOTPLUG
-	select CPU_FREQ_GOV_PERFORMANCE
-	help
-
 config CPU_FREQ_DEFAULT_GOV_LAGFREE
 	bool "lagfree"
 	select CPU_FREQ_GOV_LAGFREE
@@ -241,11 +235,6 @@ config CPU_FREQ_GOV_SAKURACTIVE
     tristate "'sakuractive' cpufreq governor"
     depends on CPU_FREQ
     help
-
-config CPU_FREQ_GOV_HOTPLUG
-	tristate "'hotplug' cpufreq governor"
-	depends on CPU_FREQ && NO_HZ && HOTPLUG_CPU
-	help
 
 config CPU_FREQ_GOV_LAGFREE
 	tristate "'lagfree' cpufreq governor"
