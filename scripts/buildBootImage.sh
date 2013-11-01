@@ -61,7 +61,7 @@ cd opensemc-ramdisk
 find . | cpio -o -H newc | gzip > ../output/image-parts/ramdisk.cpio.gz
 cd ..
 
-python $MKELF -o output/kernel.elf output/image-parts/zImage@0x40208000 output/image-parts/ramdisk.cpio.gz@0x41800000,ramdisk output/image-parts/RPM.bin@0x20000,rpm
+python $MKELF -o output/kernel.elf output/image-parts/zImage@0x40208000 output/image-parts/ramdisk.cpio.gz@0x41500000,ramdisk output/image-parts/RPM.bin@0x20000,rpm
 
 DATE_END=$(date +"%s")
 echo
