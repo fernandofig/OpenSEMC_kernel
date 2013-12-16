@@ -38,7 +38,7 @@ rm -rf ./output
 mkdir -p ./output/image-parts
 
 if [ ! -e .config ]; then
-	make defconfig opensemc_k755_defconfig
+	make defconfig opensemcu_fuji_nozomi_defconfig
 fi
 
 echo
